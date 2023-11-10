@@ -1,188 +1,158 @@
-.hidden {
-    display: none;
-}
-
-html, body {
-    height: 100%;
-}
-
-body {
-    background-color: #000;
-    font-family: Arial, Helvetica, sans-serif;
-    color: white;
-    padding: 0;
-    margin: 0;
-}
-
-header {
-    background-color: rgb(0, 102, 255);
-    padding: 10px 0;
-    margin: 0;
-}
-
-#main-logo {
-    width: 300px;
-    display: block;
-    margin: 0 auto;  
-    /*margin top and bottom, 0. Margin left and right auto */
-    box-shadow: 3px 3px 5px rgba(0,0,0,.3);
-}
-
-#character_nav {
-    background-color: #675050;
-    background-image: url('../images/team_background_img.webp');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-blend-mode: multiply;
-}
-
-.characters {
-    list-style-type: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.characters li {
-    height: 220px;
-    margin: 10px 8px;
-    text-align: left;
-    cursor: pointer;
-    box-shadow: 0 155px 0 rgb(7, 27, 141) inset;
-    transition: box-shadow .2s ease;
-}
-
-.characters li a {
-    text-decoration: none;
-}
-
-.characters li:hover {
-    box-shadow: 0 220px 0 rgb(7, 27, 141) inset;
-}
-
-.characters li h5 {
-    color: #fff;
-    padding: 12px 8px;
-}
-
-article, #instructions {
-    padding: 20px;
-}
-
-article h3, #instructions h3 {
-    font-size: 32px;
-    text-align: center;
-    margin-bottom: 14px;
-}
-
-article p, #instructions p {
-    font-size: 18px;
-    text-align: center;
-}
-
-.sprite {
-    width: 150px;
-    height: 150px;
-    background-image: url('../images/Spritesheet_Cricket_Team.jpg');
-}
-
-#Virat {background-position: -150px 0;}
-#Rohit {background-position: -300px 0;}
-#Mohammad {background-position: -450px 0;}
-#Jaspreet {background-position: -600px 0;}
-#Ravindra {background-position: -750px 0;}
-
-#Shubhman:hover, #Virat:hover, #Rohit:hover, #Mohammad:hover, #Jaspreet:hover, #Ravindra:hover {
-    background-position-y: -150px;
-}
-
-footer {
-    text-align: center;
-    padding: 20px 0;
-}
-
-.sticky_footer {
-    height: 80px;
-    background-color: rgb(40,37,37);
-    position: sticky;
-    top: 100%;
-}
-
-.lightbox {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0,0,0, 0.85);
-    background-image: url('../images/shubhman_full.png');
-    background-repeat: no-repeat;
-    background-size: 55vh;
-    background-position: 40px ;
-    display: none;
-}
-
-#lightbox1 {
-    background-image: url('../images/shubhman_full.png');
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Indian Cricket Team</title>
+    <link href="css/main.css" rel="stylesheet">
+</head>
+<body>
     
-}
+    <header>
+        <h1 class="hidden">All about the team</h1>
+        <img src="images/j_logo2.png" alt="Marvel Logo" id="main-logo">
+    </header>
 
-#lightbox2 {
-    background-image: url('../images/virat_full.png');
-}
+    <main>
+        <nav id="character_nav">
+            <h2 class="hidden"> This nav is for characters navigation </h2>
+            <ul class="characters">
+                <li>
+                    <a href="#lightbox1">
+                        <div class="sprite" id="Shubhman"></div>
+                        <h5>Shubhman Gill</h5>
+                    </a>
+                </li>
 
-#lightbox3 {
-    background-image: url('../images/rohit_full.png');
-    justify-content: center;
-}
+                <li>
+                    <a href="#lightbox2">
+                        <div class="sprite" id="Virat"></div>
+                        <h5>Virat Kohli</h5>
+                    </a>
+                    
+                </li>
 
-#lightbox4 {
-    background-image: url('../images/mohammad_full.png');
-}
+                <li>
+                    <a href="#lightbox3">
+                    <div class="sprite" id="Rohit"></div>
+                    <h5>Rohit Sharma</h5>
+                </a>
+                    
+                </li>
 
-#lightbox5 {
-    background-image: url('../images/jaspreet_full.png');
-}
+                <li>
+                    <a href="#lightbox4">
+                        <div class="sprite" id="Mohammad"></div>
+                        <h5>Mohammad Shammi</h5>
+                    </a>
+                </li>
 
-#lightbox6 {
-    background-image: url('../images/jadeja_full.png');
-}
+                <li>
+                    <a href="#lightbox5">
+                        <div class="sprite" id="Jaspreet"></div>
+                        <h5>Jaspreet Bhumra</h5>
+                    </a>
+                </li>
 
-.lightbox_close {
-    position: absolute;
-    top: 20px;
-    right: 5%;
+                <li>
+                    <a href="#lightbox6">
+                        <div class="sprite" id="Ravindra"></div>
+                        <h5>Ravindra Jadeja</h5>
+                    </a>
+                </li>
+            </ul>
+        </nav>
 
-    color: white;
-    font-size: 36px;
+        <section id="instructions">
+            <h3>Choose your Player!</h3>
+            <p>Use your mouse to hover / click to discover more about each Player</p>
+        </section>
 
-    text-decoration: none;
-    font-weight: bolder;
+    </main>
 
-    transition: all .5s ease-in-out;
-}
+    <footer class="sticky_footer">
+        <h3>All Images &copy; BCCI</h3>
+    </footer>
 
-.lightbox_close:hover {
-    opacity: 0.5;
-    color: rgb(115, 166, 233);
-}
+    <section class="lightbox" id="lightbox1">
+        <h3 class="hidden">This section is for lightbox1</h3>
+        <a href="" class="lightbox_close">x</a>
+        <article>
+            <h3 class="lb_heading">
+                Shubman Gill 
+            </h3>
+            <p class="lb_text">Shubman Gill, the stylish Indian cricketer born on September 8, 1999, emerged as a prominent talent with his elegant batting. Rising through the ranks, he played a crucial role in India's victory in the 2018 ICC Under-19 Cricket World Cup before making his senior debut in 2019. Gill's solid technique and adaptability across formats have made him a vital asset for India, especially in Test cricket, where he has showcased maturity against formidable bowling attacks.</p>
+            <p>Renowned for his graceful strokeplay and impressive footwork, Shubman Gill has become a key player for India, drawing comparisons to cricketing greats. As a symbol of India's abundant cricketing talent, Gill continues to evolve, leaving a lasting impact on the international stage.</p>
+        </article>
 
-.lightbox article {
-    width: 55%;
-    margin-left: 40%;
-    padding-top: 50px;
-}
+    </section>
 
-.lb_text, .lb_heading {
-    text-align: left;
-}
+    <section class="lightbox" id="lightbox2">
+        <h3 class="hidden">This section is for lightbox2</h3>
+        <a href="" class="lightbox_close">x</a>
+        <article>
+            <h3 class="lb_heading">
+                Virat Kohli
+            </h3>
+            <p class="lb_text">Virat Kohli, born on November 5, 1988, in Delhi, stands as a cricketing luminary with an exceptional journey marked by extraordinary achievements. From his debut in 2008, Kohli swiftly gained acclaim for his aggressive and technically adept batting style, making him one of the premier batsmen globally. His consistency across all formats has resulted in numerous record-breaking feats, solidifying his status as one of the best in contemporary cricket. Beyond individual successes, Kohli took the helm of the Indian cricket team, leading with passion and determination. Under his captaincy, the team achieved historic Test series victories in Australia, showcasing Kohli's impact both as a player and leader.</p>
+            <p class="lb_text">Off the field, Virat Kohli's influence extends to his commitment to fitness and philanthropy, adding layers to his iconic status. His charisma and dedication to the sport have endeared him not only to Indian fans but to cricket enthusiasts worldwide. As Kohli continues to shape the future of Indian cricket, his legacy remains a compelling blend of stellar performances and inspirational leadership, solidifying his place as a cricketing legend.</p>
+        </article>
 
-.lb_text {
-    line-height: 26px;
-}
+    </section>
 
-/* .lightbox#lightbox2 or .lightbox#lightbox */
-.lightbox:target {
-    display: block;
-}
+    <section class="lightbox" id="lightbox3">
+        <h3 class="hidden">This section is for lightbox3</h3>
+        <a href="" class="lightbox_close">x</a>
+        <article>
+            <h3 class="lb_heading">
+                Rohit Sharma
+            </h3>
+            <p class="lb_text">Rohit Sharma, born on April 30, 1987, in Nagpur, has become a stalwart in Indian cricket with his elegant batting style. Since debuting in 2007, Sharma has consistently impressed as an opening batsman, renowned for achieving multiple double centuries in ODIs, solidifying his status as a premier player on the international stage. Beyond his individual achievements, Sharma has embraced leadership roles within the Indian cricket team, contributing to notable victories in major tournaments. With a calm demeanor and sportsmanship, he not only stands out as a cricketing icon but also as a beloved figure and influential presence in the cricketing world.</p>
+            <p class="lb_text">Rohit Sharma's enduring contributions continue to shape Indian cricket, making him a symbol of skill and leadership. His impact extends beyond the boundaries, earning him admiration from fans and players alike. As he continues to chart new heights in his career, Sharma remains a key influencer and a vital asset to Indian cricket, leaving an indelible mark on the sport's rich tapestry.</p>
+        </article>
+
+    </section>
+
+    <section class="lightbox" id="lightbox4">
+        <h3 class="hidden">This section is for lightbox4</h3>
+        <a href="" class="lightbox_close">x</a>
+        <article>
+            <h3 class="lb_heading">
+                Mohammed Shami
+            </h3>
+            <p class="lb_text">Mohammed Shami, a seasoned Indian cricketer, has made a significant mark with his exceptional pace and skillful bowling. Debuting in 2013, Shami swiftly garnered attention for his ability to swing the ball effectively, becoming a consistent wicket-taker in all formats. His smooth run-up and potent seam position make him a formidable force on the field.</p>
+            <p class="lb_text">Shami's contributions extend beyond statistics; he's known for his resilience in challenging conditions and the crucial breakthroughs he provides. His dedication and impactful performances have earned him respect from teammates and fans alike. As a vital part of the Indian bowling attack, Mohammed Shami continues to showcase the strength and depth of India's fast-bowling talent, solidifying his position as a key asset in the world of cricket.</p>
+        </article>
+
+    </section>
+
+    <section class="lightbox" id="lightbox5">
+        <h3 class="hidden">This section is for lightbox5</h3>
+        <a href="" class="lightbox_close">x</a>
+        <article>
+            <h3 class="lb_heading">
+                Jasprit Bumrah
+            </h3>
+            <p class="lb_text">Jasprit Bumrah, a standout in the realm of fast bowling, has carved a niche for himself with his unique bowling action and consistent performances. Bursting onto the international scene in 2016, Bumrah quickly became synonymous with accuracy, pace, and the ability to deliver under pressure. His unorthodox yet effective style, characterized by a quick arm action and pinpoint yorkers, has made him a linchpin in the Indian bowling lineup across all formats.</p>
+            <p class="lb_text">Beyond his distinctive bowling, Jasprit Bumrah's impact transcends statistics. Renowned for his ability to strike crucial blows during critical moments, Bumrah's presence instills confidence in the team. With a steady rise to prominence, he has become a symbol of India's bowling prowess on the global stage. As Jasprit Bumrah continues to evolve and contribute to Indian cricket, his unique skill set and unwavering temperament position him as a key player, ensuring his enduring influence on the fast-bowling landscape.</p>
+        </article>
+
+    </section>
+
+    <section class="lightbox" id="lightbox6">
+        <h3 class="hidden">This section is for lightbox6</h3>
+        <a href="" class="lightbox_close">x</a>
+        <article>
+            <h3 class="lb_heading">
+                Ravindra Jadeja
+            </h3>
+            <p class="lb_text">Ravindra Jadeja, the dynamic all-rounder in Indian cricket, has become a force to be reckoned with, showcasing his prowess with both bat and ball. Since his international debut in 2009, Jadeja has evolved into a reliable middle-order batsman and a potent left-arm spinner. His accurate bowling, complemented by a deceptive arm ball, has often provided crucial breakthroughs for the team. Moreover, Jadeja's athletic fielding skills have set new standards, making him one of the finest fielders in world cricket.</p>
+            <p class="lb_text">Nicknamed "Sir Jadeja" by fans, he is known for his indomitable spirit on the field. Whether it's contributing with crucial wickets or playing vital innings lower down the order, Jadeja has consistently delivered. His match-changing performances in all formats have cemented his status as a valuable asset for Indian cricket. As Ravindra Jadeja continues to be a linchpin for the team, his dynamic and multi-faceted skills make him an indispensable player, embodying the spirit of modern-day cricket.</p>
+        </article>
+
+    </section>
+
+    
+
+
+</body>
+</html>
