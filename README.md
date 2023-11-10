@@ -1,5 +1,5 @@
 # Assignment Character-Build
-Int this assignment i have made a character liberary with 
+In this assignment i have made a character liberary with 
 using CSS lightbox.
 
 ## Contributing
